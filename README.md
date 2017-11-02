@@ -29,4 +29,4 @@ Just some notes on various thoughts related to infrastructure design and develop
 
 # Issues
 
-- Having difficulties setting up remote state storage on S3. 
+- Having difficulties setting up remote state storage on S3.
