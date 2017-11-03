@@ -1,8 +1,8 @@
-# Terraform
+# Terraform Templates
 
-Turn your infrastructure into code.
+This repository is a collection of useful Terraform templates that I've come across. 
 
-# Stuff you want to protect 
+# Don't Version Control This Stuff
 
 You always want to keep the following files and directories from being version controlled, and should add them to a `.gitignore` file:
 
@@ -14,9 +14,13 @@ You always want to keep the following files and directories from being version c
 terraform.tfstate.backup
 ```
 
-If you're working in a team based environment, you want to keep these files stored on a secured S3 bucket, or some other type of access-based system, such as Hashicorp Vault, etc.
+If you're working in a team based environment, you want to keep these files stored on a secured (encrypted/permissions) S3 bucket, or some other type of access-based system, such as Hashicorp Vault, etc.
 
 # Useful commands
+
+```
+some useful commands here
+```
 
 # Notes
 
@@ -27,6 +31,6 @@ Just some notes on various thoughts related to infrastructure design and develop
 **State File Storage:** Since state files contain secrets, you should not put them in a public or private git repository. Instead you should use remote storage, such as Amazon S3. 
 
 
-# Issues
+# Current Issues
 
-- Having difficulties setting up remote state storage on S3.
+- Having difficulties setting up remote state storage on S3. Potential workaround is using [Terragrunt](https://github.com/gruntwork-io/terragrunt). 
