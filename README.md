@@ -2,6 +2,10 @@
 
 This repository is a collection of useful Terraform templates that I've come across. 
 
+I might throw in some additional code using Packer, Ansible, and Shell scripts for running user data. 
+
+I'll focus on a lot of security hardening configurations (networking, firewalls, vpn, etc). 
+
 ## Security Implications
 
 You always want to keep the following files and directories from being version controlled, and should add them to a `.gitignore` file:
