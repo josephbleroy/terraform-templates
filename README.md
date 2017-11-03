@@ -11,6 +11,8 @@ I'll focus on a lot of security hardening configurations (networking, firewalls,
 You always want to keep the following files and directories from being version controlled, and should add them to a `.gitignore` file:
 
 ```
+$ vim .gitignore 
+
 .terraform
 *.tfstate
 *.tfstate.backup
