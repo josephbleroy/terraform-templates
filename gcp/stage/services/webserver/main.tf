@@ -13,6 +13,7 @@ resource "google_compute_instance" "ubuntu-xenial" {
    boot_disk {
       initialize_params {
       image = "ubuntu-1604-lts"
+      size = "30"
    }
    
 
@@ -37,6 +38,6 @@ resource "google_compute_firewall" "default" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80", "8080"]
+    ports    = ["80", "8080", "443"]
   }
 }
