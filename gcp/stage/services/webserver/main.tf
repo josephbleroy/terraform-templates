@@ -14,6 +14,8 @@ resource "google_compute_instance" "ubuntu-xenial" {
       initialize_params {
       image = "ubuntu-1604-lts"
    }
+   
+
 }
 network_interface {
    network = "default"
@@ -27,5 +29,14 @@ service_account {
 metadata {
     ssh-keys = "${var.gce_ssh_user}:${file(var.gce_ssh_pub_key_file)}"
   }
+}
 
+resource "google_compute_firewall" "default" {
+  name    = "test-firewall"
+  network = "default"
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80", "8080"]
+  }
 }
